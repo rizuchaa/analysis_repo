@@ -14,8 +14,7 @@ This project analyzes key banking metrics in Indonesia using API data collection
 📦 indonesia_banking_analysis
 │── 📂 data                   # Raw & processed data storage
 │   ├── raw/                  # Unprocessed data files
-│   ├── processed/             # Cleaned & transformed data
-│   ├── api_responses/         # JSON responses from APIs
+│   ├── std/             # Cleaned & transformed data
 │   └── README.md              # Description of data sources
 │
 │── 📂 notebooks               # Jupyter notebooks for analysis
@@ -24,7 +23,7 @@ This project analyzes key banking metrics in Indonesia using API data collection
 │   ├── 03_visualization.ipynb
 │   └── README.md
 │
-│── 📂 scripts                 # Python scripts for automation
+│── 📂 script                 # Python scripts for automation
 │   ├── fetch_api_data.py       # API data collection
 │   ├── scrape_data.py          # Web scraping (if needed)
 │   ├── clean_transform.py      # Data cleaning & preprocessing
@@ -42,7 +41,7 @@ This project analyzes key banking metrics in Indonesia using API data collection
 │   ├── executive_summary.md
 │   ├── README.md
 │
-│── 📂 config                  # Configuration files
+│── 📂 external                  # Configuration files
 │   ├── settings.json           # API keys, URLs, etc.
 │   ├── requirements.txt        # Python dependencies
 │   ├── .env                    # Environment variables (API keys)
