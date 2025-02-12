@@ -20,13 +20,13 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -r requirement.txt
+          pip install -r indonesia_banking_analysis/external/requirement.txt
 
       - name: Fetch Data from API
-        run: python fetch_api_data.py
+        run: python indonesia_banking_analysis/script/fetch_api_data.py
 
       - name: Clean Data
-        run: python clean_data.py
+        run: python indonesia_banking_analysis/script/fetch_api_data.py
 
       - name: Commit and Push Changes
         run: |
