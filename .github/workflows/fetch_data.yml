@@ -30,10 +30,10 @@ jobs:
 
       - name: Commit and Push Changes
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add indonesia_banking_analysis/data/
           git commit -m "Auto-update banking data" || echo "No changes to commit"
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/rizuchaa/analysis_repo.git main
+          git push https://x-access-token:${GH_TOKEN}@github.com/rizuchaa/analysis_repo.git main
