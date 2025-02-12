@@ -78,4 +78,3 @@ if all_data:
 else:
     logging.error("No data available to save.")
     print("No data available to save.")
-
