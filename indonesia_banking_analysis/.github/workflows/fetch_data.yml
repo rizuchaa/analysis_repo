@@ -1,0 +1,37 @@
+name: Fetch and Clean Banking Data
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  fetch-clean-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Fetch Data from API
+        run: python fetch_api_data.py
+
+      - name: Clean Data
+        run: python clean_data.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add indonesia_banking_analysis/data/
+          git commit -m "Auto-update banking data" || echo "No changes to commit"
+          git push
