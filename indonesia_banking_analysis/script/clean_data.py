@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 import logging
-import datetime
+from datetime import date
 
 # Ensure necessary folders exist
 os.makedirs("indonesia_banking_analysis/data/std", exist_ok=True)
@@ -48,7 +48,7 @@ else:
         print("Warning: Cleaned dataset is empty.")
     else:
         # Save the cleaned dataset
-        today = datetime.today().strftime('%Y-%m-%d')
+        today = date.today().strftime('%Y-%m-%d')
         cleaned_filename = f"indonesia_banking_analysis/data/std/std_banking_metrics_{today}.csv"
         df_cleaned.to_csv(cleaned_filename, index=False)
 
