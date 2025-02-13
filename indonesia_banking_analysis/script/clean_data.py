@@ -33,8 +33,8 @@ else:
     # Load the dataset
     df = pd.read_csv(latest_file)
 
-    # Convert Date column to datetime
-    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+    # Convert Year column to datetime format (assuming annual data)
+    df["Date"] = pd.to_datetime(df["Date"].astype(str) + "-01-01", errors="coerce")
 
     # Convert Value column to numeric
     df["Value"] = pd.to_numeric(df["Value"], errors="coerce")
