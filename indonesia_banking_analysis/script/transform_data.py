@@ -1,10 +1,11 @@
+import sqlite3
 import pandas as pd
 import os
 import logging
 from datetime import datetime
 
 # Ensure necessary folders exist
-os.makedirs("indonesia_banking_analysis/data/presentation", exist_ok=True)
+os.makedirs("indonesia_banking_analysis/data/sqlite", exist_ok=True)
 
 # Configure logging
 log_file = "indonesia_banking_analysis/data/log/transform_data.log"
@@ -33,17 +34,21 @@ else:
     # Load the dataset
     df = pd.read_csv(latest_file)
 
-    # Convert Date column to datetime
-    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+    # Convert Date column to datetime (handling yearly data)
+    df["Date"] = pd.to_datetime(df["Date"], format="%Y", errors="coerce")
 
-    # Aggregate data for Tableau presentation (example: Monthly averages)
-    df_presentation = df.groupby([df["Date"].dt.to_period("M"), "Indicator"]).agg({"Value": "mean"}).reset_index()
-    df_presentation["Date"] = df_presentation["Date"].astype(str)  # Convert period to string
+    # Aggregate data for easier analysis (example: yearly averages)
+    df_presentation = df.groupby(["Date", "Indicator"]).agg({"Value": "mean"}).reset_index()
 
-    # Save the transformed dataset
-    date_str = datetime.today().strftime("%Y-%m-%d")
-    transformed_filename = f"indonesia_banking_analysis/data/presentation/factless_banking_metrics_{date_str}.csv"
-    df_presentation.to_csv(transformed_filename, index=False)
+    # Save to SQLite
+    db_path = "indonesia_banking_analysis/data/presentation/factless_banking_analysis.db"
+    conn = sqlite3.connect(db_path)
 
-    logging.info(f"Transformed data saved to {transformed_filename}")
-    print(f"Transformed data saved to {transformed_filename}")
+    # Store transformed data in a "factless_banking_metrics" table
+    df_presentation.to_sql("factless_banking_metrics", conn, if_exists="replace", index=False)
+
+    conn.commit()
+    conn.close()
+
+    logging.info(f"Transformed data stored in SQLite at {db_path}")
+    print(f"Transformed data stored in SQLite at {db_path}")
