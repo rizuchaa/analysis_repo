@@ -1213,3 +1213,13 @@
 2025-08-29 00:51:05,602 - INFO - Fetched 19 records for NPL
 2025-08-29 00:51:06,021 - INFO - Fetched 19 records for CAR
 2025-08-29 00:51:06,023 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2025-08-29.csv
+2025-08-30 00:47:38,916 - INFO - Starting API fetch process...
+2025-08-30 00:47:39,493 - ERROR - Error fetching FR.INR.LEND: 403 Client Error: Forbidden for url: https://api.worldbank.org/v2/country/ID/indicator/FR.INR.LEND?format=json
+2025-08-30 00:47:39,494 - WARNING - No data retrieved for NIM
+2025-08-30 00:47:39,778 - ERROR - Error fetching FB.BNK.LEND.ZS: 403 Client Error: Forbidden for url: https://api.worldbank.org/v2/country/ID/indicator/FB.BNK.LEND.ZS?format=json
+2025-08-30 00:47:39,779 - WARNING - No data retrieved for LDR
+2025-08-30 00:47:39,976 - ERROR - Error fetching FB.AST.NPER.ZS: 403 Client Error: Forbidden for url: https://api.worldbank.org/v2/country/ID/indicator/FB.AST.NPER.ZS?format=json
+2025-08-30 00:47:39,977 - WARNING - No data retrieved for NPL
+2025-08-30 00:47:40,193 - ERROR - Error fetching FB.BNK.CAPA.ZS: 403 Client Error: Forbidden for url: https://api.worldbank.org/v2/country/ID/indicator/FB.BNK.CAPA.ZS?format=json
+2025-08-30 00:47:40,194 - WARNING - No data retrieved for CAR
+2025-08-30 00:47:40,194 - ERROR - No data available to save.
