@@ -2535,3 +2535,10 @@
 2026-04-05 01:23:51,958 - INFO - Fetched 19 records for NPL
 2026-04-05 01:23:52,720 - INFO - Fetched 19 records for CAR
 2026-04-05 01:23:52,723 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-04-05.csv
+2026-04-06 01:24:11,413 - INFO - Starting API fetch process...
+2026-04-06 01:26:14,286 - ERROR - Error fetching FR.INR.LEND: 400 Client Error: Bad Request for url: https://api.worldbank.org/v2/country/ID/indicator/FR.INR.LEND?format=json
+2026-04-06 01:26:14,288 - WARNING - No data retrieved for NIM
+2026-04-06 01:27:41,289 - INFO - Fetched 0 records for LDR
+2026-04-06 01:31:05,442 - INFO - Fetched 19 records for NPL
+2026-04-06 01:32:18,988 - INFO - Fetched 19 records for CAR
+2026-04-06 01:32:18,990 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-04-06.csv
