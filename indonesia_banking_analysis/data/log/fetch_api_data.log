@@ -2686,3 +2686,9 @@
 2026-04-30 01:58:23,645 - INFO - Fetched 19 records for NPL
 2026-04-30 01:58:24,032 - INFO - Fetched 19 records for CAR
 2026-04-30 01:58:24,034 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-04-30.csv
+2026-05-01 02:00:25,505 - INFO - Starting API fetch process...
+2026-05-01 02:00:26,776 - INFO - Fetched 39 records for NIM
+2026-05-01 02:00:27,166 - INFO - Fetched 0 records for LDR
+2026-05-01 02:00:28,566 - INFO - Fetched 19 records for NPL
+2026-05-01 02:00:29,155 - INFO - Fetched 19 records for CAR
+2026-05-01 02:00:29,157 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-05-01.csv
