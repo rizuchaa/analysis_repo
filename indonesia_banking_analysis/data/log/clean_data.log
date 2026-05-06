@@ -1339,3 +1339,6 @@
 2026-05-05 01:53:19,834 - INFO - Starting data cleaning process...
 2026-05-05 01:53:19,835 - INFO - Loading raw data from indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-05-05.csv
 2026-05-05 01:53:19,841 - INFO - Cleaned data saved to indonesia_banking_analysis/data/std/std_banking_metrics_2026-05-05.csv
+2026-05-06 01:52:16,815 - INFO - Starting data cleaning process...
+2026-05-06 01:52:16,816 - INFO - Loading raw data from indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-05-06.csv
+2026-05-06 01:52:16,821 - INFO - Cleaned data saved to indonesia_banking_analysis/data/std/std_banking_metrics_2026-05-06.csv
