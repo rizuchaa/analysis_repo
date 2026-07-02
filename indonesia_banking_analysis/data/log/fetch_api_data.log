@@ -3063,3 +3063,9 @@
 2026-07-01 02:31:34,229 - ERROR - Error fetching FB.BNK.CAPA.ZS: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/ID/indicator/FB.BNK.CAPA.ZS?format=json
 2026-07-01 02:31:34,230 - WARNING - No data retrieved for CAR
 2026-07-01 02:31:34,230 - ERROR - No data available to save.
+2026-07-02 02:11:03,769 - INFO - Starting API fetch process...
+2026-07-02 02:11:04,955 - INFO - Fetched 40 records for NIM
+2026-07-02 02:11:05,300 - INFO - Fetched 0 records for LDR
+2026-07-02 02:11:06,070 - INFO - Fetched 21 records for NPL
+2026-07-02 02:11:08,409 - INFO - Fetched 21 records for CAR
+2026-07-02 02:11:08,412 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-07-02.csv
