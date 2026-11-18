@@ -3906,3 +3906,11 @@
 2026-11-17 05:42:05,268 - INFO - Fetched 21 records for NPL
 2026-11-17 05:42:37,805 - INFO - Fetched 21 records for CAR
 2026-11-17 05:42:37,808 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-11-17.csv
+2026-11-18 05:04:08,854 - INFO - Starting API fetch process...
+2026-11-18 05:06:36,067 - INFO - Fetched 40 records for NIM
+2026-11-18 05:09:22,479 - INFO - Fetched 0 records for LDR
+2026-11-18 05:09:22,568 - ERROR - Error fetching FB.AST.NPER.ZS: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/ID/indicator/FB.AST.NPER.ZS?format=json
+2026-11-18 05:09:22,569 - WARNING - No data retrieved for NPL
+2026-11-18 05:14:22,638 - ERROR - Error fetching FB.BNK.CAPA.ZS: 524 Server Error: <none> for url: https://api.worldbank.org/v2/country/ID/indicator/FB.BNK.CAPA.ZS?format=json
+2026-11-18 05:14:22,639 - WARNING - No data retrieved for CAR
+2026-11-18 05:14:22,641 - INFO - Data saved to indonesia_banking_analysis/data/raw/raw_banking_metrics_2026-11-18.csv
